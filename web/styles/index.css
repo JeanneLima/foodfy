@@ -1,0 +1,48 @@
+/* Global variables */
+:root {
+  --color-black: #000;
+  --color-gray-darkest: #111;
+  --color-gray-darker: ##444444;
+  --color-gray-dark: #777;
+  --color-gray-light: #999999;
+  --color-gray-lightest: #EEE;
+  --color-white: #FFF;
+  --color-pink: #FBDFDB;
+}
+
+/* Global navbar */
+#navbar {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+}
+
+#navbar__brand {
+  margin-right: 8vw;
+}
+
+#navbar__menu-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar__menu-list-item {
+  margin: 0 15px;
+}
+
+.navbar__menu-list-item a {
+  text-decoration: none;
+  color: var(--color-gray-darkest)
+}
+
+/* Interactions */
+.navbar__menu-list-item a:hover {
+  opacity: 0.4;
+  transition: opacity 240ms;
+}
+
+.navbar__menu-list-item.active a {
+  font-weight: bold;
+}
