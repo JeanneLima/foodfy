@@ -1,6 +1,6 @@
 # Launchbase Bootcamp - Fullstack Challenge - Rocketseat
 
-## 🍲 Foodfy - The project
+## 🍲 Foodfy - The Project
 > Project Foodfy developed during Rocketseat's Bootcamp Launchbase.
 > Complete website for a recipe company called Foodfy.
 
