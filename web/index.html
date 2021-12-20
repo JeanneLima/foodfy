@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/grid.css">
+  <link rel="stylesheet" href="styles/index.css">
+
+  <title>Foodfy</title>
+</head>
+<body>
+  <!-- Global Navbar -->
+  <nav id="app__navbar" class="container--default">
+    <a id="navbar__brand">
+      <img src="./assets/logo.png" alt="Logo Foodfy" />
+    </a>
+
+    <ul id="navbar__menu-list">
+      <li class="navbar__menu-list-item">
+        <a href="#">Sobre</a>
+      </li>
+      <li class="navbar__menu-list-item">
+        <a href="#">Receitas</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main content of selected page -->
+  <main id="app__main" class="container--default">
+    <!-- Header -->
+    <header id="header">
+      <div id="header__block--left">
+        <h1 class="header__title">As melhores receitas</h1>
+        <p class="header__description">Aprenda a contruir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+      </div>
+
+      <div id="header__block--right">
+        <img class="header__image" src="./assets/chef.png" alt="Ilustração de chefe de cozinha" />
+      </div>
+    </header>
+
+    <!-- Most popular recipes -->
+    <section id="recipes__section--most-popular">
+      <h2 class="section__title">Mais acessadas</h2>
+
+      <div class="recipes__list">
+        <div class="recipes__list-item">
+          <div class="recipes__list-item-image">
+            <img class="recipes__list-item-image" src="./assets/burger.png" alt="" />
+          </div>
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+
+        <div class="recipes__list-item">
+          <div class="recipes__list-item-image">
+            <img class="recipes__list-item-image" src="./assets/pizza.png" alt="" />
+          </div>
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+
+        <div class="recipes__list-item">
+          <div class="recipes__list-item-image">
+            <img class="recipes__list-item-image" src="./assets/espaguete.png" alt="" />
+          </div>
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+
+        <div class="recipes__list-item">
+          <div class="recipes__list-item-image">
+            <img class="recipes__list-item-image" src="./assets/lasanha.png" alt="" />
+          </div>
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+
+        <div class="recipes__list-item">
+          <div class="recipes__list-item-image">
+            <img class="recipes__list-item-image" src="./assets/doce.png" alt="" />
+          </div>
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+
+        <div class="recipes__list-item">
+          <div class="recipes__list-item-image">
+            <img class="recipes__list-item-image" src="./assets/asinhas.png" alt="" />
+          </div>
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="app__footer">
+    <p class="footer__copyright">Todos direitos reservados, receitas Foodfy.</p>
+  </footer>
+</body>
+</html>
