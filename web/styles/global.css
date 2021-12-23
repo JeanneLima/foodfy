@@ -122,6 +122,13 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal__overlay--active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
@@ -167,6 +174,7 @@ body {
   color: var(--color-gray-light);
   font-size: 16px;
   line-height: 19px;
+  cursor: pointer;
 }
 
 .modal__link--close {
