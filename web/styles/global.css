@@ -125,7 +125,7 @@ body {
 }
 
 .modal {
-  width: 40%;
+  width: 80%;
   max-width: 660px;
   border-radius: 16px;
   background-color: var(--color-white);
