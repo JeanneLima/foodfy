@@ -29,59 +29,74 @@
   <!-- Main content of selected page -->
   <main id="app__main--recipes" class="container--default">
     <div class="recipes__list">
-      <div class="recipes__list-item">
-        <div class="recipes__list-item-image">
+      <div id="recipes__list-item--hamburger" class="recipes__list-item">
+        <div class="recipes__list-item-image-container">
           <img class="recipes__list-item-image" src="./../assets/hamburger.png" alt="" />
         </div>
         <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
         <span class="recipes__list-item-author">por Jorge Relato</span>
       </div>
 
-      <div class="recipes__list-item">
-        <div class="recipes__list-item-image">
+      <div id="recipes__list-item--pizza" class="recipes__list-item">
+        <div class="recipes__list-item-image-container">
           <img class="recipes__list-item-image" src="./../assets/pizza.png" alt="" />
         </div>
-        <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
-        <span class="recipes__list-item-author">por Jorge Relato</span>
+        <h4 class="recipes__list-item-title">Pizza 4 estações</h4>
+        <span class="recipes__list-item-author">por Fabiana Melo</span>
       </div>
 
-      <div class="recipes__list-item">
-        <div class="recipes__list-item-image">
+      <div id="recipes__list-item--spaghetti" class="recipes__list-item">
+        <div class="recipes__list-item-image-container">
           <img class="recipes__list-item-image" src="./../assets/spaghetti.png" alt="" />
         </div>
-        <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
-        <span class="recipes__list-item-author">por Jorge Relato</span>
+        <h4 class="recipes__list-item-title">Espaguete ao alho</h4>
+        <span class="recipes__list-item-author">por Júlia Kinoto</span>
       </div>
 
-      <div class="recipes__list-item">
-        <div class="recipes__list-item-image">
+      <div id="recipes__list-item--lasagna" class="recipes__list-item">
+        <div class="recipes__list-item-image-container">
           <img class="recipes__list-item-image" src="./../assets/lasagna.png" alt="" />
         </div>
-        <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
-        <span class="recipes__list-item-author">por Jorge Relato</span>
+        <h4 class="recipes__list-item-title">Lasanha mac n’ cheese</h4>
+        <span class="recipes__list-item-author">por Juliano Vieira</span>
       </div>
 
-      <div class="recipes__list-item">
-        <div class="recipes__list-item-image">
+      <div id="recipes__list-item--chocolate" class="recipes__list-item">
+        <div class="recipes__list-item-image-container">
           <img class="recipes__list-item-image" src="./../assets/chocolate.png" alt="" />
         </div>
-        <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
-        <span class="recipes__list-item-author">por Jorge Relato</span>
+        <h4 class="recipes__list-item-title">Docinhos pão-do-céu</h4>
+        <span class="recipes__list-item-author">por Ricardo Golvea</span>
       </div>
 
-      <div class="recipes__list-item">
-        <div class="recipes__list-item-image">
+      <div id="recipes__list-item--chicken-wings" class="recipes__list-item">
+        <div class="recipes__list-item-image-container">
           <img class="recipes__list-item-image" src="./../assets/chicken-wings.png" alt="" />
         </div>
-        <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
-        <span class="recipes__list-item-author">por Jorge Relato</span>
+        <h4 class="recipes__list-item-title">Asinhas de frango ao barbecue</h4>
+        <span class="recipes__list-item-author">por Vania Steroski</span>
       </div>
     </div>
   </main>
+
+  <!-- Recipe modal -->
+  <div class="modal__overlay">
+    <div class="modal">
+      <div class="modal__image-container">
+        <img class="modal__image" src="" alt="Imagem da receita" />
+      </div>
+      <h4 class="modal__title">-</h4>
+      <span class="modal__author">-</span>
+      <button class="modal__link modal__link--close">Fechar modal</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer id="app__footer">
     <p class="footer__copyright">Todos direitos reservados, receitas Foodfy.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="./../scripts/recipes.js"></script>
 </body>
 </html>
