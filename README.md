@@ -10,7 +10,7 @@
 
 This is a static page web project created from scratch.
 It was built using as a basis the prototype (`.github/specs/layout-guide.html`) and the rules of the challenge briefing.
-In addition, it was guided by the best practices of TDD, BDD and Clean Code.
+In addition, it was guided by the best practices of Clean Code, BEM CSS, Mobile First, Git Flow and Conventional Commits.
 
 ## 📌 Main Technologies
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
