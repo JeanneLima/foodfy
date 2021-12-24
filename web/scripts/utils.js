@@ -4,8 +4,7 @@ export const insertRecipeModalContent = (recipeImageFileName, recipeTitle, recip
   document.querySelector('.modal__author').firstChild.nodeValue = recipeAuthor;
 }
 
-export const toogleRecipeModal = (modalOverlay, recipeCardsList, recipeAssetsDir) => {
-  // Show modal
+export const showRecipeModal = (modalOverlay, recipeCardsList, recipeAssetsDir) => {
   for (let recipeCard of recipeCardsList) {
     recipeCard.addEventListener('click', () => {
       const recipeImageFileName = recipeCard.getAttribute('id').split("--")[1];
@@ -17,7 +16,8 @@ export const toogleRecipeModal = (modalOverlay, recipeCardsList, recipeAssetsDir
       modalOverlay.classList.add('modal__overlay--active')
     });
   }
-  
-  // Hide modal
-  document.querySelector('.modal__link--close').addEventListener('click', () => modalOverlay.classList.remove('modal__overlay--active'));
+}
+
+export const hideRecipeModal = (closeTriggerElement, modalOverlay) => {
+  closeTriggerElement.addEventListener('click', () => modalOverlay.classList.remove('modal__overlay--active'));
 }
