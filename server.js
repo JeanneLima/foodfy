@@ -1,5 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+const recipesData = require('./data.js');
 
 const server = express();
 
@@ -14,11 +15,27 @@ nunjucks.configure('views', {
 });
 
 // Routes
-server.get('/', (req, res) => res.render('home'));
+server.get('/', (req, res) => {
+  const quantityRecipesToShow = 6; // show only the first 6 recipes
+  const reducedRecipesList = recipesData.slice(0, quantityRecipesToShow);
+  const recipes = reducedRecipesList.map((recipe, index) => {
+    const recipeId = index;
+    return { ...recipe, id: recipeId };
+  });
+
+  return res.render('home', { recipes });
+});
 
 server.get('/about', (req, res) => res.render('about'));
 
-server.get('/recipes', (req, res) => res.render('recipes'));
+server.get('/recipes', (req, res) => {
+  const recipes = recipesData.map((recipe, index) => {
+    const recipeId = index;
+    return { ...recipe, id: recipeId };
+  });
+
+  return res.render('recipes', { recipes });
+});
 
 // Port configuration
 server.listen('5000', () => {
