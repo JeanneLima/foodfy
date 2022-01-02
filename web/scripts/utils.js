@@ -16,7 +16,7 @@ export const showRecipeModal = (
   recipeCardsList,
   recipeAssetsDir,
 ) => {
-  for (let recipeCard of recipeCardsList) {
+  for (const recipeCard of recipeCardsList) {
     recipeCard.addEventListener('click', () => {
       const recipeImageFileName = recipeCard.getAttribute('id').split('--')[1];
       const recipeTitle = recipeCard.getElementsByClassName(
