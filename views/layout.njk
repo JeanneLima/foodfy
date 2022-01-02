@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% block head %}
+      <title>Foodfy</title>
+    {% endblock %}    
+  </head>
+  <body>
+    <!-- Global Navbar -->
+    <nav id="app__navbar" class="container--default">
+      <a id="navbar__brand" href="/">
+        <img src="./../assets/logo.png" alt="Logo Foodfy"/>
+      </a>
+      <ul id="navbar__menu-list">
+        <li class="navbar__menu-list-item">
+          <a href="/about">Sobre</a>
+        </li>
+        <li class="navbar__menu-list-item">
+          <a href="/recipes">Receitas</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main content of selected page -->
+    <main id="app__main" class="container--default">
+      {% block mainContent %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer id="app__footer">
+      <p class="footer__copyright">
+        Todos direitos reservados, receitas Foodfy.
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    {% block scriptsImport %}{% endblock%}
+  </body>
+</html>

@@ -1,42 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.njk" %}
 
-  <link rel="stylesheet" href="./styles/index.css">
+{% block head %}
+  <link rel="stylesheet" href="./../styles/home.css">
+{% endblock %}
 
-  <title>Foodfy</title>
-</head>
-<body>
-  <!-- Global Navbar -->
-  <nav id="app__navbar" class="container--default">
-    <a id="navbar__brand" href="index.html">
-      <img src="./assets/logo.png" alt="Logo Foodfy" />
-    </a>
-
-    <ul id="navbar__menu-list">
-      <li class="navbar__menu-list-item">
-        <a href="./pages/about.html">Sobre</a>
-      </li>
-      <li class="navbar__menu-list-item">
-        <a href="./pages/recipes.html">Receitas</a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Main content of selected page -->
-  <main id="app__main--home" class="container--default">
+{% block mainContent %}
     <!-- Header -->
     <header id="header--home">
       <div id="header__block--left">
         <h1 class="header__title">As melhores receitas</h1>
-        <p class="header__description">Aprenda a contruir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+        <p class="header__description">
+          Aprenda a contruir os melhores pratos com receitas criadas por
+          profissionais do mundo inteiro.
+        </p>
       </div>
 
       <div id="header__block--right">
-        <img class="header__image" src="./assets/chef.png" alt="Ilustração de chefe de cozinha" />
+        <img
+          class="header__image"
+          src="./assets/chef.png"
+          alt="Ilustração de chefe de cozinha"
+        />
       </div>
     </header>
 
@@ -47,7 +31,11 @@
       <div class="recipes__list">
         <div id="recipes__list-item--hamburger" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
-            <img class="recipes__list-item-image" src="./assets/hamburger.png" alt="" />
+            <img
+              class="recipes__list-item-image"
+              src="./assets/hamburger.png"
+              alt=""
+            />
           </div>
           <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
           <span class="recipes__list-item-author">por Jorge Relato</span>
@@ -55,7 +43,11 @@
 
         <div id="recipes__list-item--pizza" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
-            <img class="recipes__list-item-image" src="./assets/pizza.png" alt="" />
+            <img
+              class="recipes__list-item-image"
+              src="./assets/pizza.png"
+              alt=""
+            />
           </div>
           <h4 class="recipes__list-item-title">Pizza 4 estações</h4>
           <span class="recipes__list-item-author">por Fabiana Melo</span>
@@ -63,7 +55,11 @@
 
         <div id="recipes__list-item--spaghetti" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
-            <img class="recipes__list-item-image" src="./assets/spaghetti.png" alt="" />
+            <img
+              class="recipes__list-item-image"
+              src="./assets/spaghetti.png"
+              alt=""
+            />
           </div>
           <h4 class="recipes__list-item-title">Espaguete ao alho</h4>
           <span class="recipes__list-item-author">por Júlia Kinoto</span>
@@ -71,7 +67,11 @@
 
         <div id="recipes__list-item--lasagna" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
-            <img class="recipes__list-item-image" src="./assets/lasagna.png" alt="" />
+            <img
+              class="recipes__list-item-image"
+              src="./assets/lasagna.png"
+              alt=""
+            />
           </div>
           <h4 class="recipes__list-item-title">Lasanha mac n’ cheese</h4>
           <span class="recipes__list-item-author">por Juliano Vieira</span>
@@ -79,17 +79,30 @@
 
         <div id="recipes__list-item--chocolate" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
-            <img class="recipes__list-item-image" src="./assets/chocolate.png" alt="" />
+            <img
+              class="recipes__list-item-image"
+              src="./assets/chocolate.png"
+              alt=""
+            />
           </div>
           <h4 class="recipes__list-item-title">Docinhos pão-do-céu</h4>
           <span class="recipes__list-item-author">por Ricardo Golvea</span>
         </div>
 
-        <div id="recipes__list-item--chicken-wings" class="recipes__list-item">
+        <div
+          id="recipes__list-item--chicken-wings"
+          class="recipes__list-item"
+        >
           <div class="recipes__list-item-image-container">
-            <img class="recipes__list-item-image" src="./assets/chicken-wings.png" alt="" />
+            <img
+              class="recipes__list-item-image"
+              src="./assets/chicken-wings.png"
+              alt=""
+            />
           </div>
-          <h4 class="recipes__list-item-title">Asinhas de frango ao barbecue</h4>
+          <h4 class="recipes__list-item-title">
+            Asinhas de frango ao barbecue
+          </h4>
           <span class="recipes__list-item-author">por Vania Steroski</span>
         </div>
       </div>
@@ -107,13 +120,8 @@
       <button class="modal__link modal__link--close">Fechar modal</button>
     </div>
   </div>
+{% endblock %}
 
-  <!-- Footer -->
-  <footer id="app__footer">
-    <p class="footer__copyright">Todos direitos reservados, receitas Foodfy.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script type="module" src="./scripts/index.js"></script>
-</body>
-</html>
+{% block scriptsImport %}
+  <script type="module" src="./../scripts/home.js"></script>
+{% endblock%}
