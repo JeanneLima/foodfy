@@ -1,4 +1,4 @@
-import { showRecipeModal, hideRecipeModal } from './utils.js'
+import { showRecipeModal, hideRecipeModal } from './utils.js';
 
 //--- Global variables ---//
 const modalOverlay = document.querySelector('.modal__overlay');
