@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "layout.njk" %}
 
-    <link rel="stylesheet" href="./../styles/recipes.css" />
+{% block head %}
+  <link rel="stylesheet" href="./../styles/home.css">
+{% endblock %}
 
-    <title>Foodfy</title>
-  </head>
-  <body>
-    <!-- Global Navbar -->
-    <nav id="app__navbar" class="container--default">
-      <a id="navbar__brand" href="./../index.html">
-        <img src="./../assets/logo.png" alt="Logo Foodfy" />
-      </a>
-
-      <ul id="navbar__menu-list">
-        <li class="navbar__menu-list-item">
-          <a href="./about.html">Sobre</a>
-        </li>
-        <li class="navbar__menu-list-item">
-          <a href="./recipes.html">Receitas</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Main content of selected page -->
-    <main id="app__main--recipes" class="container--default">
+{% block mainContent %}
       <div class="recipes__list">
         <div id="recipes__list-item--hamburger" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
@@ -116,15 +93,8 @@
         <button class="modal__link modal__link--close">Fechar modal</button>
       </div>
     </div>
+{% endblock %}}
 
-    <!-- Footer -->
-    <footer id="app__footer">
-      <p class="footer__copyright">
-        Todos direitos reservados, receitas Foodfy.
-      </p>
-    </footer>
-
-    <!-- Scripts -->
-    <script type="module" src="./../scripts/recipes.js"></script>
-  </body>
-</html>
+{% block scriptsImport %}
+  <script type="module" src="./../scripts/recipes.js"></script>
+{% endblock%}
