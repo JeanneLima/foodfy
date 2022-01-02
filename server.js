@@ -14,6 +14,8 @@ nunjucks.configure('views', {
 });
 
 // Routes
+server.get('/', (req, res) => res.render('home'));
+
 server.get('/sobre', (req, res) => res.render('about'));
 
 // Port configuration
