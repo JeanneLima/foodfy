@@ -8,7 +8,10 @@ server.use(express.static('public'));
 
 server.set('view engine', 'njk');
 
-nunjucks.configure('views', { express: server });
+nunjucks.configure('views', {
+  express: server,
+  noCache: true,
+});
 
 // Routes
 server.get('/sobre', (req, res) => res.render('about'));
