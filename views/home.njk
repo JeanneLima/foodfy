@@ -1,119 +1,43 @@
 {% extends "layout.njk" %}
-
 {% block head %}
   <link rel="stylesheet" href="./../styles/home.css">
-{% endblock %}
-
-{% block mainContent %}
+  {% endblock %}
+  {% block mainContent %}
     <!-- Header -->
     <header id="header--home">
       <div id="header__block--left">
         <h1 class="header__title">As melhores receitas</h1>
         <p class="header__description">
           Aprenda a contruir os melhores pratos com receitas criadas por
-          profissionais do mundo inteiro.
+                              profissionais do mundo inteiro.
         </p>
       </div>
-
       <div id="header__block--right">
-        <img
-          class="header__image"
-          src="./assets/chef.png"
-          alt="Ilustração de chefe de cozinha"
-        />
+        <img class="header__image" src="./assets/chef.png" alt="Ilustração de chefe de cozinha"/>
       </div>
     </header>
-
     <!-- Most popular recipes -->
     <section id="recipes__section--most-popular">
       <h2 class="section__title section__title--primary">Mais acessadas</h2>
-
       <div class="recipes__list">
-        <div id="recipes__list-item--hamburger" class="recipes__list-item">
-          <div class="recipes__list-item-image-container">
-            <img
-              class="recipes__list-item-image"
-              src="./assets/hamburger.png"
-              alt=""
-            />
+        {% for recipe in recipes %}
+          <div id="recipes__list-item--{{ recipe.id }}" class="recipes__list-item">
+            <div class="recipes__list-item-image-container">
+              <img class="recipes__list-item-image" src="{{ recipe.image }}" alt="Imagem da receita {{ recipe.title }}"/>
+            </div>
+            <h4 class="recipes__list-item-title">{{ recipe.title }}</h4>
+            <span class="recipes__list-item-author">por
+              {{ recipe.author }}</span>
           </div>
-          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
-          <span class="recipes__list-item-author">por Jorge Relato</span>
-        </div>
-
-        <div id="recipes__list-item--pizza" class="recipes__list-item">
-          <div class="recipes__list-item-image-container">
-            <img
-              class="recipes__list-item-image"
-              src="./assets/pizza.png"
-              alt=""
-            />
-          </div>
-          <h4 class="recipes__list-item-title">Pizza 4 estações</h4>
-          <span class="recipes__list-item-author">por Fabiana Melo</span>
-        </div>
-
-        <div id="recipes__list-item--spaghetti" class="recipes__list-item">
-          <div class="recipes__list-item-image-container">
-            <img
-              class="recipes__list-item-image"
-              src="./assets/spaghetti.png"
-              alt=""
-            />
-          </div>
-          <h4 class="recipes__list-item-title">Espaguete ao alho</h4>
-          <span class="recipes__list-item-author">por Júlia Kinoto</span>
-        </div>
-
-        <div id="recipes__list-item--lasagna" class="recipes__list-item">
-          <div class="recipes__list-item-image-container">
-            <img
-              class="recipes__list-item-image"
-              src="./assets/lasagna.png"
-              alt=""
-            />
-          </div>
-          <h4 class="recipes__list-item-title">Lasanha mac n’ cheese</h4>
-          <span class="recipes__list-item-author">por Juliano Vieira</span>
-        </div>
-
-        <div id="recipes__list-item--chocolate" class="recipes__list-item">
-          <div class="recipes__list-item-image-container">
-            <img
-              class="recipes__list-item-image"
-              src="./assets/chocolate.png"
-              alt=""
-            />
-          </div>
-          <h4 class="recipes__list-item-title">Docinhos pão-do-céu</h4>
-          <span class="recipes__list-item-author">por Ricardo Golvea</span>
-        </div>
-
-        <div
-          id="recipes__list-item--chicken-wings"
-          class="recipes__list-item"
-        >
-          <div class="recipes__list-item-image-container">
-            <img
-              class="recipes__list-item-image"
-              src="./assets/chicken-wings.png"
-              alt=""
-            />
-          </div>
-          <h4 class="recipes__list-item-title">
-            Asinhas de frango ao barbecue
-          </h4>
-          <span class="recipes__list-item-author">por Vania Steroski</span>
-        </div>
+        {% endfor %}
       </div>
     </section>
   </main>
-
   <!-- Recipe modal -->
   <div class="modal__overlay">
     <div class="modal">
       <div class="modal__image-container">
-        <img class="modal__image" src="" alt="Imagem da receita" />
+        <img class="modal__image" src="" alt="Imagem da receita"/>
       </div>
       <h4 class="modal__title">-</h4>
       <span class="modal__author">-</span>
@@ -121,7 +45,6 @@
     </div>
   </div>
 {% endblock %}
-
 {% block scriptsImport %}
   <script type="module" src="./../scripts/home.js"></script>
-{% endblock%}
+{% endblock %}
