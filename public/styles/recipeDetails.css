@@ -50,20 +50,25 @@
 }
 
 .recipe__description-header-control {
+  color: var(--color-gray-light);
   font-weight: bold;
   font-size: 12px;
-  color: var(--color-gray-light);
   text-transform: uppercase;
 }
 
 .recipe__description-content {
-  font-size: 18px;
   color: var(--color-gray-darker);
+  font-size: 18px;
   line-height: 28px;
   margin-top: 20px;
+  display: block;
 }
 
 .recipe__description-content--list {
   padding: 0 0 0 20px;
-  margin: 0;
+  margin: 20px 0 0;
+}
+
+.recipe__description-content--hidden {
+  display: none;
 }
