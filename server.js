@@ -1,5 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+const recipesData = require('./data.js');
 
 const server = express();
 
@@ -18,7 +19,14 @@ server.get('/', (req, res) => res.render('home'));
 
 server.get('/about', (req, res) => res.render('about'));
 
-server.get('/recipes', (req, res) => res.render('recipes'));
+server.get('/recipes', (req, res) => {
+  const recipes = recipesData.map((recipe, index) => {
+    const recipeId = index;
+    return { ...recipe, id: recipeId };
+  });
+
+  return res.render('recipes', { recipes });
+});
 
 // Port configuration
 server.listen('5000', () => {

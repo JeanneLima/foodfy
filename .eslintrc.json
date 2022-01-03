@@ -32,7 +32,7 @@
       ],
       "object-curly-spacing": ["error", "always"],
       "implicit-arrow-linebreak": ["error", "beside"],
-      "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+      "arrow-parens": ["error", "always'", { "requireForBlockBody": true }],
       "arrow-spacing": ["error", { "before": true, "after": true }],
       "no-console": "off",
       "no-underscore-dangle": "off",
