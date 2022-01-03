@@ -37,6 +37,17 @@ server.get('/recipes', (req, res) => {
   return res.render('recipes', { recipes });
 });
 
+server.get('/recipes/:index', (req, res) => {
+  const recipeIndex = req.params.index;
+  const selectedRecipeData = recipesData[recipeIndex];
+
+  if (!selectedRecipeData) {
+    return res.send('Desculpe, mas a receita não foi encontrada.');
+  }
+
+  return res.send(selectedRecipeData);
+});
+
 // Port configuration
 server.listen('5000', () => {
   console.log('Server is running');
