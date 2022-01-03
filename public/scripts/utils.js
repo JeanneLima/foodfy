@@ -1,3 +1,13 @@
+export const showRecipeDetails = recipeCardsList => {
+  console.log('recipeCardsList:', recipeCardsList);
+
+  recipeCardsList.forEach((recipeCard, index) => {
+    recipeCard.addEventListener('click', () => {
+      window.location.href = `/recipes/${index}`;
+    });
+  });
+};
+
 export const insertRecipeModalContent = (
   recipeImageFileName,
   recipeTitle,
