@@ -15,7 +15,14 @@ nunjucks.configure('views', {
 });
 
 // Routes
-server.get('/', (req, res) => res.render('home'));
+server.get('/', (req, res) => {
+  const recipes = recipesData.map((recipe, index) => {
+    const recipeId = index;
+    return { ...recipe, id: recipeId };
+  });
+
+  return res.render('home', { recipes });
+});
 
 server.get('/about', (req, res) => res.render('about'));
 
