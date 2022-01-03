@@ -45,7 +45,7 @@ server.get('/recipes/:index', (req, res) => {
     return res.send('Desculpe, mas a receita não foi encontrada.');
   }
 
-  return res.send(selectedRecipeData);
+  return res.render('recipeDetails', { recipe: selectedRecipeData });
 });
 
 // Port configuration
