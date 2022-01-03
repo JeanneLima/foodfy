@@ -1,0 +1,74 @@
+@import './global.css';
+
+#app__main {
+  margin-top: 50px;
+}
+
+.recipe__image-container {
+  width: 100%;
+  max-height: 280px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.recipe__image {
+  width: 100%;
+  height: auto;
+}
+
+.recipe__title-container {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.recipe__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--color-gray-darkest);
+  margin-bottom: 4px;
+}
+
+.recipe__author {
+  font-size: 20px;
+  color: var(--color-gray-dark);
+}
+
+.recipe__description {
+  margin-bottom: 50px;
+}
+
+.recipe__description-header {
+  display: flex;
+  align-items: baseline;
+}
+
+.recipe__description-header-subtitle {
+  color: var(--color-gray-darkest);
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 8px 0 0;
+}
+
+.recipe__description-header-control {
+  color: var(--color-gray-light);
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.recipe__description-content {
+  color: var(--color-gray-darker);
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 20px;
+  display: block;
+}
+
+.recipe__description-content--list {
+  padding: 0 0 0 20px;
+  margin: 20px 0 0;
+}
+
+.recipe__description-content--hidden {
+  display: none;
+}
