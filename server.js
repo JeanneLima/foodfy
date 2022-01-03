@@ -16,7 +16,9 @@ nunjucks.configure('views', {
 
 // Routes
 server.get('/', (req, res) => {
-  const recipes = recipesData.map((recipe, index) => {
+  const quantityRecipesToShow = 6; // show only the first 6 recipes
+  const reducedRecipesList = recipesData.slice(0, quantityRecipesToShow);
+  const recipes = reducedRecipesList.map((recipe, index) => {
     const recipeId = index;
     return { ...recipe, id: recipeId };
   });
