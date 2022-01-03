@@ -29,19 +29,82 @@
       <h2 class="section__title section__title--primary">Mais acessadas</h2>
 
       <div class="recipes__list">
-        {% for recipe in recipes %}
-          <div id="recipes__list-item--{{ recipe.id }}" class="recipes__list-item">
-            <div class="recipes__list-item-image-container">
-              <img
-                class="recipes__list-item-image"
-                src="{{ recipe.image }}"
-                alt="Imagem da receita {{ recipe.title }}"
-              />
-            </div>
-            <h4 class="recipes__list-item-title">{{ recipe.title }}</h4>
-            <span class="recipes__list-item-author">por {{ recipe.author }}</span>
+        <div id="recipes__list-item--hamburger" class="recipes__list-item">
+          <div class="recipes__list-item-image-container">
+            <img
+              class="recipes__list-item-image"
+              src="./assets/hamburger.png"
+              alt=""
+            />
           </div>
-        {% endfor %}
+          <h4 class="recipes__list-item-title">Triplo bacon burger</h4>
+          <span class="recipes__list-item-author">por Jorge Relato</span>
+        </div>
+
+        <div id="recipes__list-item--pizza" class="recipes__list-item">
+          <div class="recipes__list-item-image-container">
+            <img
+              class="recipes__list-item-image"
+              src="./assets/pizza.png"
+              alt=""
+            />
+          </div>
+          <h4 class="recipes__list-item-title">Pizza 4 estações</h4>
+          <span class="recipes__list-item-author">por Fabiana Melo</span>
+        </div>
+
+        <div id="recipes__list-item--spaghetti" class="recipes__list-item">
+          <div class="recipes__list-item-image-container">
+            <img
+              class="recipes__list-item-image"
+              src="./assets/spaghetti.png"
+              alt=""
+            />
+          </div>
+          <h4 class="recipes__list-item-title">Espaguete ao alho</h4>
+          <span class="recipes__list-item-author">por Júlia Kinoto</span>
+        </div>
+
+        <div id="recipes__list-item--lasagna" class="recipes__list-item">
+          <div class="recipes__list-item-image-container">
+            <img
+              class="recipes__list-item-image"
+              src="./assets/lasagna.png"
+              alt=""
+            />
+          </div>
+          <h4 class="recipes__list-item-title">Lasanha mac n’ cheese</h4>
+          <span class="recipes__list-item-author">por Juliano Vieira</span>
+        </div>
+
+        <div id="recipes__list-item--chocolate" class="recipes__list-item">
+          <div class="recipes__list-item-image-container">
+            <img
+              class="recipes__list-item-image"
+              src="./assets/chocolate.png"
+              alt=""
+            />
+          </div>
+          <h4 class="recipes__list-item-title">Docinhos pão-do-céu</h4>
+          <span class="recipes__list-item-author">por Ricardo Golvea</span>
+        </div>
+
+        <div
+          id="recipes__list-item--chicken-wings"
+          class="recipes__list-item"
+        >
+          <div class="recipes__list-item-image-container">
+            <img
+              class="recipes__list-item-image"
+              src="./assets/chicken-wings.png"
+              alt=""
+            />
+          </div>
+          <h4 class="recipes__list-item-title">
+            Asinhas de frango ao barbecue
+          </h4>
+          <span class="recipes__list-item-author">por Vania Steroski</span>
+        </div>
       </div>
     </section>
   </main>
