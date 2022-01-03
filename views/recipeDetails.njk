@@ -9,14 +9,17 @@
     <div class="recipe__image-container">
       <img class="recipe__image" src="{{ recipe.image }}" alt="Imagem da receita {{ recipe.title }}"/>
     </div>
-    <h1 class="recipe__title">{{ recipe.title }}</h1>
-    <span class="recipe__author">por {{ recipe.author }}</span>
+
+    <div class="recipe__title-container">
+      <h1 class="recipe__title">{{ recipe.title }}</h1>
+      <span class="recipe__author">por {{ recipe.author }}</span>
+    </div>
 
     <!-- Ingredients -->
     <section class="recipe__description">
       <div class="recipe__description-header">
         <h2 class="recipe__description-header-subtitle">Ingredientes</h2>
-        <button class="recipe__description-header-control">Esconder</button>
+        <button class="recipe__description-header-control button--link">Esconder</button>
       </div>
 
       <ul class="recipe__description-content recipe__description-content--list" id="recipe__description-content--ingredients">
@@ -30,7 +33,7 @@
     <section class="recipe__description">
       <div class="recipe__description-header">
         <h2 class="recipe__description-header-subtitle">Modo de preparo</h2>
-        <button class="recipe__description-header-control">Esconder</button>
+        <button class="recipe__description-header-control button--link">Esconder</button>
       </div>
 
       <ul class="recipe__description-content recipe__description-content--list" id="recipe__description-content--preparation">
@@ -44,7 +47,7 @@
     <section class="recipe__description">
       <div class="recipe__description-header">
         <h2 class="recipe__description-header-subtitle">Informações adicionais</h2>
-        <button class="recipe__description-header-control">Esconder</button>
+        <button class="recipe__description-header-control button--link">Esconder</button>
       </div>
 
       <p class="recipe__description-content recipe__description-content--paragraph" id="recipe__description-content--extra-informations">
