@@ -44,6 +44,7 @@
     </section>
 
     <!-- Extra informations -->
+    {% if recipe.information !== '' and recipe.information !== undefined and recipe.information !== null %}
     <section class="recipe__description">
       <div class="recipe__description-header">
         <h2 class="recipe__description-header-subtitle">Informações adicionais</h2>
@@ -55,6 +56,7 @@
       <p>
     </section>
   </div>
+  {% endif %}
 {% endblock %}}
 
 {% block scriptsImport %}
