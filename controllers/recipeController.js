@@ -7,7 +7,7 @@ exports.getRecipes = (req, res) => {
     return { ...recipe, id: recipeId };
   });
 
-  return res.render('recipes', { recipes });
+  return res.render('recipe/recipes', { recipes });
 };
 
 // GET - Return a list of most accessed recipes
@@ -31,5 +31,5 @@ exports.getRecipeDetails = (req, res) => {
     return res.send('Desculpe, mas a receita não foi encontrada.');
   }
 
-  return res.render('recipeDetails', { recipe: selectedRecipeData });
+  return res.render('recipe/recipeDetails', { recipe: selectedRecipeData });
 };
