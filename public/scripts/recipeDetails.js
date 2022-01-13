@@ -4,18 +4,15 @@ const recipeDetailsCollapseButtonsList = document.querySelectorAll(
 );
 
 // General functions
-export const toggleRecipeDetails = () => {
+const toggleRecipeDetails = () => {
   for (const recipeDetailsCollapseButton of recipeDetailsCollapseButtonsList) {
     recipeDetailsCollapseButton.addEventListener('click', () => {
-      const thisContent =        recipeDetailsCollapseButton.parentElement.parentElement.querySelector(
-          '.recipe__description-content',
-        );
+      const thisContent = recipeDetailsCollapseButton.parentElement.parentElement
+        .querySelector('.recipe__description-content');
 
       const thisContentClassesList = thisContent.classList;
 
-      if (
-        thisContentClassesList.contains('recipe__description-content--hidden')
-      ) {
+      if (thisContentClassesList.contains('recipe__description-content--hidden')) {
         thisContentClassesList.remove('recipe__description-content--hidden');
         recipeDetailsCollapseButton.textContent = 'Esconder';
       } else {
