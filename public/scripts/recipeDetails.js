@@ -1,9 +1,9 @@
-// --- Global variables ---//
+// Global variables
 const recipeDetailsCollapseButtonsList = document.querySelectorAll(
   '.recipe__description-header-control',
 );
 
-// --- General functions ---//
+// General functions
 export const toggleRecipeDetails = () => {
   for (const recipeDetailsCollapseButton of recipeDetailsCollapseButtonsList) {
     recipeDetailsCollapseButton.addEventListener('click', () => {

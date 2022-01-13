@@ -1,7 +1,7 @@
 import { goToRecipeDetailsPage } from './utils.js';
 
-// --- Global variables ---//
+// Global variables
 const recipeCardsList = document.querySelectorAll('.recipes__list-item');
 
-// --- General functions ---//
+// General functions
 goToRecipeDetailsPage(recipeCardsList);
