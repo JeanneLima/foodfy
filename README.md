@@ -9,15 +9,24 @@
   <img alt="Foodfy" title="Foodfy mockup" src=".github/assets/foodfy-mockup.png" />
 </h1>
 
-This is a static page web project created from scratch.
-It was built using as a basis the prototype (`.github/specs/layout-guide.html`) and the rules of the challenge briefing.
+This is a web project created from scratch.
+It was built using as a basis the prototype (`.github/specs/layout-guide.html`) and the rules of the challenges briefing.
 In addition, it was guided by the best practices of Clean Code, BEM CSS, Mobile First, Git Flow and Conventional Commits.
+
+## 💡 Challenges Briefing
+- [Challenge 01](https://github.com/JeanneLima/bootcamp-launchbase-desafios-02/blob/master/desafios/02-foodfy.md)
+- [Challenge 02](https://github.com/JeanneLima/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md)
+
 
 ## 📌 Main Technologies
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node.js](https://nodejs.org/en/about/)
+- [Express](http://expressjs.com)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+
 
 ## 📂 Installation
 
@@ -33,15 +42,15 @@ SSH URLs provide access to a Git repository via SSH, a secure protocol. If you h
 git@github.com:JeanneLima/foodfy.git
 ```
 
-To view the Front-end files, access the folder below:
-
-```
-cd web
-```
-
 ## 🚀 Running the Project
 
-To run the project's front-end in a development environment, you just need to have installed and use some static server tool, such as [http-server](https://www.npmjs.com/package/http-server) or the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension of the VS Code.
+To run the project in a development environment, just install all the dependencies and start the local server following the next steps:
+```bash
+npm install
+npm start
+```
+
+The application will be available in the browser via [http://localhost:5000](http://localhost:5000).
 
 ## 📜 License
 
