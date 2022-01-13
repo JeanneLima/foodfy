@@ -86,6 +86,10 @@ body {
   line-height: 19px;
 }
 
+.navbar__menu-list-item--active a {
+  font-weight: bold;
+}
+
 /* Recipes */
 .recipes__list {
   display: grid;

@@ -6,3 +6,14 @@ export const goToRecipeDetailsPage = recipeCardsList => {
     });
   });
 };
+
+export const setActivePageStyle = () => {
+  const currentPage = window.location.pathname;
+  const navbarItems = document.querySelectorAll('.navbar__menu-list-item a');
+
+  navbarItems.forEach(navbarItem => {
+    if (currentPage.includes(navbarItem.getAttribute('href'))) {
+      navbarItem.parentNode.classList.add('navbar__menu-list-item--active');
+    }
+  });
+};
