@@ -1,6 +1,6 @@
 @import './global.css';
 
-#app__main {
+.main__container {
   margin-top: 50px;
 }
 
