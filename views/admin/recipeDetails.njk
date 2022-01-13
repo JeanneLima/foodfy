@@ -1,7 +1,12 @@
-{% extends "layout.njk" %}
+{% extends "admin/layout.njk" %}
 
 {% block head %}
   <link rel="stylesheet" href="../../styles/recipeDetails.css">
+{% endblock %}
+
+{% block sectionHeaderContent %}
+  <h2 class="page__title">Receita: {{ recipe.title }}</h2>
+  <button class="button button--filled button--primary">Editar receita</button>
 {% endblock %}
 
 {% block mainContent %}

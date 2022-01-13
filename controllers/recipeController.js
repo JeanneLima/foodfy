@@ -22,7 +22,7 @@ exports.getMostAccessedRecipes = (req, res) => {
   return res.render('home', { recipes });
 };
 
-// GET - Return a details of selected recipe
+// GET - Return details of selected recipe
 exports.getRecipeDetails = (req, res) => {
   const recipeIndex = req.params.index;
   const selectedRecipeData = recipesData[recipeIndex];
