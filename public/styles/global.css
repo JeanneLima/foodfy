@@ -186,6 +186,11 @@ body {
 }
 
 /* Interactions */
+.button:hover {
+  opacity: 0.8;
+  transition: opacity 240ms;
+}
+
 .navbar__menu-list-item a:hover {
   opacity: 0.4;
   transition: opacity 240ms;
