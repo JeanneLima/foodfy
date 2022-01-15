@@ -13,6 +13,7 @@ routes.get('/recipes', recipeActions.getRecipes);
 routes.get('/recipes/:index', recipeActions.getRecipeDetails);
 
 // Admin routes
-routes.get('/admin/recipes/:id', adminActions.getRecipeDetails); // Exibir detalhes de uma receita
+routes.get('/admin/recipes', adminActions.getRecipes);
+routes.get('/admin/recipes/:id', adminActions.getRecipeDetails);
 
 module.exports = routes;
