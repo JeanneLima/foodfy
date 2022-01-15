@@ -1,6 +1,6 @@
 const recipesData = require('../data');
 
-// GET - Return a list of all recipes
+// GET - Returns the page and list data of all recipes
 exports.getRecipes = (req, res) => {
   const recipes = recipesData.map((recipe, index) => {
     const recipeId = index;
@@ -10,7 +10,7 @@ exports.getRecipes = (req, res) => {
   return res.render('admin/recipesList', { recipes });
 };
 
-// GET - Return details of selected recipe
+// GET - Returns the selected recipe detail page and data
 exports.getRecipeDetails = (req, res) => {
   const recipeIndex = req.params.id;
   const selectedRecipeData = recipesData[recipeIndex];

@@ -1,6 +1,6 @@
 const recipesData = require('../data');
 
-// GET - Return a list of all recipes
+// GET - Returns the page and list data of all recipes
 exports.getRecipes = (req, res) => {
   const recipes = recipesData.map((recipe, index) => {
     const recipeId = index;
@@ -10,7 +10,7 @@ exports.getRecipes = (req, res) => {
   return res.render('recipe/recipes', { recipes });
 };
 
-// GET - Return a list of most accessed recipes
+// GET - Returns the page and list data of all most accessed recipes
 exports.getMostAccessedRecipes = (req, res) => {
   const quantityRecipesToShow = 6; // show only the first 6 recipes
   const reducedRecipesList = recipesData.slice(0, quantityRecipesToShow);
@@ -22,7 +22,7 @@ exports.getMostAccessedRecipes = (req, res) => {
   return res.render('home', { recipes });
 };
 
-// GET - Return details of selected recipe
+// GET - Returns the selected recipe detail page and data
 exports.getRecipeDetails = (req, res) => {
   const recipeIndex = req.params.index;
   const selectedRecipeData = recipesData[recipeIndex];
