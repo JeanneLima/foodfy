@@ -1,13 +1,13 @@
 {% extends "admin/layout.njk" %}
 
 {% block head %}
-  <link rel="stylesheet" href="../../styles/recipesList.css">
+  <link rel="stylesheet" href="../../styles/adminRecipesList.css">
 {% endblock %}
 
 {% block mainContent %}
   <section id="recipes__section--admin">
     <h2 class="section__title section__title--primary">Gerenciar receitas</h2>
-    <div class="recipes__list">
+    <div class="recipes__list recipes__list--admin">
       {% for recipe in recipes %}
         <div id="recipes__list-item--{{ recipe.id }}" class="recipes__list-item">
           <div class="recipes__list-item-image-container">
@@ -25,5 +25,5 @@
 {% endblock %}
 
 {% block scriptsImport %}
-  <script type="module" src="../../scripts/home.js"></script>
+  <script type="module" src="../../scripts/recipes.js"></script>
 {% endblock %}

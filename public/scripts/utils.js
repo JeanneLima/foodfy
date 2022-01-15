@@ -7,6 +7,14 @@ export const goToRecipeDetailsPage = recipeCardsList => {
   });
 };
 
+export const goToRecipeDetailsAdminPage = recipeCardsList => {
+  recipeCardsList.forEach((recipeCard, index) => {
+    recipeCard.addEventListener('click', () => {
+      window.location.href = `/admin/recipes/${index}`;
+    });
+  });
+};
+
 export const setActivePageStyle = () => {
   const currentPage = window.location.pathname;
   const navbarItems = document.querySelectorAll('.navbar__menu-list-item a');
