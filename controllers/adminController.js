@@ -21,3 +21,6 @@ exports.getRecipeDetails = (req, res) => {
 
   return res.render('admin/recipeDetails', { recipe: selectedRecipeData });
 };
+
+// GET - Return the new recipe registration page
+exports.createRecipe = (req, res) => res.render('admin/recipeCreation');

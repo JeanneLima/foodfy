@@ -8,6 +8,7 @@
   --color-gray-darker: #444;
   --color-gray-dark: #777;
   --color-gray-light: #999;
+  --color-gray-lighter: #ddd;
   --color-gray-lightest: #eee;
   --color-white: #fff;
   --color-pink: #fbdfdb;
@@ -20,11 +21,55 @@
   box-sizing: border-box;
 }
 
+/* General HTML Tags */
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+textarea { 
+  resize: none;
+}
+
+/* Forms */
+.form__field-block {
+  margin-top: 30px;
+}
+
+.form__field-block:first-child {
+  margin-top: 0;
+}
+
+.form__label {
+  color: var(--color-gray-darkest);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form__input {
+  color: var(--color-gray-darkest);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-lighter);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  width: 100%;
+  min-height: 49px;
+  display: block;
+}
+
+.form__button--add-more {
+  color: var(--color-primary);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
 }
 
 /* Buttons */

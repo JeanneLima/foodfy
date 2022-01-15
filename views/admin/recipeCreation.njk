@@ -1,0 +1,16 @@
+{% extends "admin/layout.njk" %}
+
+{% block sectionHeaderContent %}
+  <h2 class="page__title">Criando receita</h2>
+  <button class="button button--filled button--primary">Salvar receita</button>
+{% endblock %}
+
+{% block mainContent %}
+  <form class="form__container" method="POST" action="/admin/recipes">
+  {% include '../templates/recipeManagementForm.njk' %}
+  </form>
+{% endblock %}
+
+{% block scriptsImport %}
+  <script type="module" src="../../scripts/recipeManagement.js"></script>
+{% endblock %}
