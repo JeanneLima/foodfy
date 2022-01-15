@@ -1,17 +1,25 @@
 <div class="form__field-block">
   <label class="form__label">Imagem da receita</label>
-  <input type="url" name="image" placeholder="https://" class="form__input">
+  <input type="url" name="image" value="" placeholder="https://" class="form__input">
 </div>
 
 <div class="form__field-block">
   <label class="form__label">Ingredientes</label>
-  <input type="text" name="ingredients" class="form__input">
+  <div id="form__multi-input-list--ingredients" class="form__multi-input-list">
+    <div class="form__multi-input-list-item">
+      <input type="text" name="ingredients[]" value="" class="form__input form__multi-input">
+    </div>
+  </div>
   <button type="button" class="form__button--add-more button button--link">Adicionar novo ingrediente</button>
 </div>
 
 <div class="form__field-block">
   <label class="form__label">Modo de preparo</label>
-  <input type="text" name="preparation" class="form__input">
+  <div id="form__multi-input-list--preparation" class="form__multi-input-list">
+    <div class="form__multi-input-list-item">
+      <input type="text" name="preparation[]" value="" class="form__input form__multi-input">
+    </div>
+  </div>
   <button type="button" class="form__button--add-more button button--link">Adicionar novo passo</button>
 </div>
 
