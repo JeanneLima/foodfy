@@ -1,7 +1,15 @@
-import { goToRecipeDetailsPage } from './utils.js';
+import { goToRecipeDetailsPage, goToRecipeDetailsAdminPage } from './utils.js';
 
-// --- Global variables ---//
-const recipeCardsList = document.querySelectorAll('.recipes__list-item');
+// Global variables
+const defaultRecipeCardsList = document.querySelectorAll(
+  '.recipes__list--default .recipes__list-item',
+);
+const adminRecipeCardsList = document.querySelectorAll(
+  '.recipes__list--admin .recipes__list-item',
+);
 
-// --- General functions ---//
-goToRecipeDetailsPage(recipeCardsList);
+// General functions
+defaultRecipeCardsList !== null
+  && goToRecipeDetailsPage(defaultRecipeCardsList);
+adminRecipeCardsList !== null
+  && goToRecipeDetailsAdminPage(adminRecipeCardsList);

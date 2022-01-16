@@ -1,0 +1,52 @@
+<div class="recipe__container">
+  <div class="recipe__image-container">
+    <img class="recipe__image" src="{{ recipe.image }}" alt="Imagem da receita {{ recipe.title }}"/>
+  </div>
+
+  <div class="recipe__title-container">
+    <h1 class="recipe__title">{{ recipe.title }}</h1>
+    <span class="recipe__author">por {{ recipe.author }}</span>
+  </div>
+
+  <!-- Ingredients -->
+  <section class="recipe__description">
+    <div class="recipe__description-header">
+      <h2 class="recipe__description-header-subtitle">Ingredientes</h2>
+      <button class="recipe__description-header-control button button--link">Esconder</button>
+    </div>
+
+    <ul class="recipe__description-content recipe__description-content--list" id="recipe__description-content--ingredients">
+      {% for ingredient in recipe.ingredients %}
+        <li class="recipe__description-list-item">{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Preparation -->
+  <section class="recipe__description">
+    <div class="recipe__description-header">
+      <h2 class="recipe__description-header-subtitle">Modo de preparo</h2>
+      <button class="recipe__description-header-control button button--link">Esconder</button>
+    </div>
+
+    <ul class="recipe__description-content recipe__description-content--list" id="recipe__description-content--preparation">
+      {% for preparationStep in recipe.preparation %}
+        <li class="recipe__description-list-item">{{ preparationStep }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Extra informations -->
+  {% if recipe.information !== '' and recipe.information !== undefined and recipe.information !== null %}
+  <section class="recipe__description">
+    <div class="recipe__description-header">
+      <h2 class="recipe__description-header-subtitle">Informações adicionais</h2>
+      <button class="recipe__description-header-control button button--link">Esconder</button>
+    </div>
+
+    <p class="recipe__description-content recipe__description-content--paragraph" id="recipe__description-content--extra-informations">
+      {{ recipe.information }}
+    <p>
+  </section>
+  {% endif %}
+</div>

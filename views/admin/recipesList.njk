@@ -1,0 +1,36 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="../../styles/adminRecipesList.css">
+{% endblock %}
+
+{% block mainContent %}
+  <div class="page__header">
+    <h2 class="page__title">Gerenciar receitas</h2>
+    <div class="page__buttons-container">
+      <button class="page__button--create-recipe button button--filled button--primary">Criar receita</button>
+    </div>
+  </div>
+
+  <section id="recipes__section--admin">
+    <div class="recipes__list recipes__list--admin">
+      {% for recipe in recipes %}
+        <div id="recipes__list-item--{{ recipe.id }}" class="recipes__list-item">
+          <div class="recipes__list-item-image-container">
+            <img class="recipes__list-item-image" src="{{ recipe.image }}" alt="Imagem da receita {{ recipe.title }}"/>
+          </div>
+          <div class="recipes__list-item-infos">
+            <h4 class="recipes__list-item-title">{{ recipe.title }}</h4>
+            <span class="recipes__list-item-author">por {{ recipe.author }}</span>
+            <button class="recipes__list-item-button button button--link">Visualizar</button>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+
+{% block scriptsImport %}
+  <script type="module" src="../../scripts/recipes.js"></script>
+  <script type="module" src="../../scripts/recipeManagement.js"></script>
+{% endblock %}
