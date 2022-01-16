@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="../../../styles/global.css">
+
+    {% block head %}
+      <title>Foodfy</title>
+    {% endblock %}    
+  </head>
+  <body>
+    <!-- Global Navbar -->
+    <nav id="app__navbar--admin" class="app__navbar container--default">
+      <a class="navbar__brand" href="/admin/recipes">
+        <img src="../../../assets/logo-light.png" alt="Logo Foodfy"/>
+      </a>
+    </nav>
+
+    <!-- Main content of selected page -->
+    <main id="main__container--admin" class="main__container container--default">
+      {% block mainContent %}{% endblock %}
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="../../../scripts/index.js"></script>
+    {% block scriptsImport %}{% endblock%}
+  </body>
+</html>

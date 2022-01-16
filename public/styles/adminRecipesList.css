@@ -1,0 +1,47 @@
+/* Most popular recipes section */
+#recipes__section--admin {
+  margin: 50px 0 40px;
+}
+
+/* Recipes */
+.recipes__list {
+  grid-template-columns: 1fr;
+  gap: 40px; 
+}
+
+.recipes__list-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.recipes__list-item-infos {
+  display: block;
+  position: relative;
+}
+
+.recipes__list-item-title,
+.recipes__list-item-author,
+.recipes__list-item-button {
+  width: 100%;
+  text-align: left;
+}
+
+.recipes__list-item-title {
+  margin: 0 0 5px;
+}
+
+.recipes__list-item-button {
+  color: #6558C3;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 10px 0 0;
+}
+
+/* Responsiveness */
+@media screen and (min-width: 768px) {
+  .recipes__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
