@@ -1,8 +1,13 @@
 // Global variables
+const recipeCreationButton = document.querySelector('.page__button--create-recipe');
 const recipeEditButton = document.querySelector('.page__button--edit-recipe');
 const addMoreMultiInputButtonsList = document.querySelectorAll('.form__button--add-more');
 
 // General functions
+const goToRecipeCreationAdminPage = () => {
+  window.location.href = `/admin/recipes/create`;
+};
+
 const goToRecipeEditionAdminPage = () => {
     const currentPathInfosArr = window.location.pathname.split("/");
     const currentPathRecipeIdIndex = currentPathInfosArr.length - 1;
@@ -31,5 +36,6 @@ const addNewMultiInputField = () => {
   }
 };
 
+recipeCreationButton !== null && recipeCreationButton.addEventListener('click', goToRecipeCreationAdminPage);
 recipeEditButton !== null && recipeEditButton.addEventListener('click', goToRecipeEditionAdminPage);
 addMoreMultiInputButtonsList !== null && addNewMultiInputField();
