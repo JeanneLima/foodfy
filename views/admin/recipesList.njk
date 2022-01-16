@@ -4,14 +4,14 @@
   <link rel="stylesheet" href="../../styles/adminRecipesList.css">
 {% endblock %}
 
-{% block sectionHeaderContent %}
-  <h2 class="page__title">Gerenciar receitas</h2>
-  <div class="page__buttons-container">
-    <button class="page__button--create-recipe button button--filled button--primary">Criar receita</button>
-  </div>
-{% endblock %}
-
 {% block mainContent %}
+  <div class="page__header">
+    <h2 class="page__title">Gerenciar receitas</h2>
+    <div class="page__buttons-container">
+      <button class="page__button--create-recipe button button--filled button--primary">Criar receita</button>
+    </div>
+  </div>
+
   <section id="recipes__section--admin">
     <div class="recipes__list recipes__list--admin">
       {% for recipe in recipes %}

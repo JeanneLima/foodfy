@@ -18,4 +18,6 @@ routes.get('/admin/recipes/create', adminActions.createRecipe);
 routes.get('/admin/recipes/:id', adminActions.getRecipeDetails);
 routes.get('/admin/recipes/:id/edit', adminActions.editRecipe);
 
+routes.post('/admin/recipes', adminActions.postRecipe);
+
 module.exports = routes;

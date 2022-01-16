@@ -1,8 +1,8 @@
-const recipesData = require('../data');
+const recipesData = require('../data.json');
 
 // GET - Returns the page and list data of all recipes
 exports.getRecipes = (req, res) => {
-  const recipes = recipesData.map((recipe, index) => {
+  const recipes = recipesData.recipes.map((recipe, index) => {
     const recipeId = index;
     return { ...recipe, id: recipeId };
   });
@@ -13,7 +13,7 @@ exports.getRecipes = (req, res) => {
 // GET - Returns the page and list data of all most accessed recipes
 exports.getMostAccessedRecipes = (req, res) => {
   const quantityRecipesToShow = 6; // show only the first 6 recipes
-  const reducedRecipesList = recipesData.slice(0, quantityRecipesToShow);
+  const reducedRecipesList = recipesData.recipes.slice(0, quantityRecipesToShow);
   const recipes = reducedRecipesList.map((recipe, index) => {
     const recipeId = index;
     return { ...recipe, id: recipeId };
@@ -25,7 +25,7 @@ exports.getMostAccessedRecipes = (req, res) => {
 // GET - Returns the selected recipe detail page and data
 exports.getRecipeDetails = (req, res) => {
   const recipeIndex = req.params.index;
-  const selectedRecipeData = recipesData[recipeIndex];
+  const selectedRecipeData = recipesData.recipes[recipeIndex];
 
   if (!selectedRecipeData) {
     return res.send('Desculpe, mas a receita não foi encontrada.');

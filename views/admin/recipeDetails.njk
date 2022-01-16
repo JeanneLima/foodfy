@@ -4,14 +4,14 @@
   <link rel="stylesheet" href="../../styles/recipeDetails.css">
 {% endblock %}
 
-{% block sectionHeaderContent %}
-  <h2 class="page__title">Receita: {{ recipe.title }}</h2>
-  <div class="page__buttons-container">
-    <button class="page__button--edit-recipe button button--filled button--primary">Editar receita</button>
-  </div>
-{% endblock %}
-
 {% block mainContent %}
+  <div class="page__header">
+    <h2 class="page__title">Receita: {{ recipe.title }}</h2>
+    <div class="page__buttons-container">
+      <button class="page__button--edit-recipe button button--filled button--primary">Editar receita</button>
+    </div>
+  </div>
+
   {% include '../templates/recipeDetails.njk' %}
 {% endblock %}}
 
