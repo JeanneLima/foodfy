@@ -23,4 +23,4 @@ const toggleRecipeDetails = () => {
   }
 };
 
-toggleRecipeDetails();
+recipeDetailsCollapseButtonsList !== null && toggleRecipeDetails();

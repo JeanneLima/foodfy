@@ -4,4 +4,4 @@ import { goToRecipeDetailsPage } from './utils.js';
 const recipeCardsList = document.querySelectorAll('.recipes__list-item');
 
 // General functions
-goToRecipeDetailsPage(recipeCardsList);
+recipeCardsList !== null && goToRecipeDetailsPage(recipeCardsList);

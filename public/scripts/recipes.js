@@ -5,5 +5,5 @@ const defaultRecipeCardsList = document.querySelectorAll('.recipes__list--defaul
 const adminRecipeCardsList = document.querySelectorAll('.recipes__list--admin .recipes__list-item');
 
 // General functions
-goToRecipeDetailsPage(defaultRecipeCardsList);
-goToRecipeDetailsAdminPage(adminRecipeCardsList);
+defaultRecipeCardsList !== null && goToRecipeDetailsPage(defaultRecipeCardsList);
+adminRecipeCardsList !== null && goToRecipeDetailsAdminPage(adminRecipeCardsList);
