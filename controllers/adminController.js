@@ -8,7 +8,7 @@ exports.getRecipes = (req, res) => {
     return { ...recipe, id: recipeId };
   });
 
-  return res.render('admin/recipesList', { recipes });
+  return res.status(200).render('admin/recipesList', { recipes });
 };
 
 // GET - Return the new recipe registration page
@@ -20,10 +20,10 @@ exports.getRecipeDetails = (req, res) => {
   const selectedRecipeData = recipesData.recipes[recipeIndex];
 
   if (!selectedRecipeData) {
-    return res.send('Desculpe, mas a receita não foi encontrada.');
+    return res.status(404).send('Desculpe, mas a receita não foi encontrada.');
   }
 
-  return res.render('admin/recipeDetails', { recipe: selectedRecipeData });
+  return res.status(200).render('admin/recipeDetails', { recipe: selectedRecipeData });
 };
 
 // GET - Return recipe edition page
@@ -32,10 +32,10 @@ exports.editRecipe = (req, res) => {
   const selectedRecipeData = recipesData.recipes[recipeIndex];
 
   if (!selectedRecipeData) {
-    return res.send('Desculpe, mas a receita não foi encontrada.');
+    return res.status(404).send('Desculpe, mas a receita não foi encontrada.');
   }
 
-  return res.render('admin/recipeEdition', { recipe: selectedRecipeData });
+  return res.status(200).render('admin/recipeEdition', { recipe: selectedRecipeData });
 };
 
 // POST - Create a new recipe
@@ -49,7 +49,7 @@ exports.postRecipe = (req, res) => {
       (typeof req.body[key] === "object" && req.body[key][0] === '')) 
       && key !== 'information'
     ) {
-      return res.send('Por favor, preencha todos os campos obrigatórios.');
+      return res.status(422).send('Por favor, preencha todos os campos obrigatórios.');
     }
   };
 
@@ -63,8 +63,8 @@ exports.postRecipe = (req, res) => {
   recipesData.recipes.push(newRecipeData);
 
   fs.writeFile('data.json', JSON.stringify(recipesData, null, 2), error => {
-    if (error) return res.send('Erro ao escrever dados em arquivo');
+    if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
 
-    return res.redirect('/admin/recipes');
+    return res.status(200).redirect('/admin/recipes');
   });
 };

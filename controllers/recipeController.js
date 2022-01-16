@@ -7,7 +7,7 @@ exports.getRecipes = (req, res) => {
     return { ...recipe, id: recipeId };
   });
 
-  return res.render('recipe/recipes', { recipes });
+  return res.status(200).render('recipe/recipes', { recipes });
 };
 
 // GET - Returns the page and list data of all most accessed recipes
@@ -19,7 +19,7 @@ exports.getMostAccessedRecipes = (req, res) => {
     return { ...recipe, id: recipeId };
   });
 
-  return res.render('home', { recipes });
+  return res.status(200).render('home', { recipes });
 };
 
 // GET - Returns the selected recipe detail page and data
@@ -28,8 +28,8 @@ exports.getRecipeDetails = (req, res) => {
   const selectedRecipeData = recipesData.recipes[recipeIndex];
 
   if (!selectedRecipeData) {
-    return res.send('Desculpe, mas a receita não foi encontrada.');
+    return res.status(404).send('Desculpe, mas a receita não foi encontrada.');
   }
 
-  return res.render('recipe/recipeDetails', { recipe: selectedRecipeData });
+  return res.status(200).render('recipe/recipeDetails', { recipe: selectedRecipeData });
 };
