@@ -20,5 +20,6 @@ routes.get('/admin/recipes/:id/edit', adminActions.editRecipe);
 
 routes.post('/admin/recipes', adminActions.postRecipe);
 routes.put('/admin/recipes', adminActions.putRecipe);
+routes.delete('/admin/recipes', adminActions.deleteRecipe);
 
 module.exports = routes;

@@ -1,12 +1,9 @@
 const fs = require('fs');
-const dataJSON = require('../data.json');
-
-// Global variables
-let recipesData = dataJSON.recipes;
+const data = require('../data.json');
 
 // GET - Returns the page and list data of all recipes
 exports.getRecipes = (req, res) => {
-  const recipes = recipesData.map((recipe, index) => {
+  const recipes = data.recipes.map((recipe, index) => {
     const recipeId = index;
     return { ...recipe, id: recipeId };
   });
@@ -20,7 +17,7 @@ exports.createRecipe = (req, res) => res.render('admin/recipeCreation');
 // GET - Returns the selected recipe detail page and data
 exports.getRecipeDetails = (req, res) => {
   const recipeIndex = req.params.id;
-  const selectedRecipeData = recipesData[recipeIndex];
+  const selectedRecipeData = data.recipes[recipeIndex];
 
   if (!selectedRecipeData) {
     return res.status(404).send('Desculpe, mas a receita não foi encontrada.');
@@ -32,7 +29,7 @@ exports.getRecipeDetails = (req, res) => {
 // GET - Return recipe edition page
 exports.editRecipe = (req, res) => {
   const recipeIndex = req.params.id;
-  const selectedRecipeData = recipesData[recipeIndex];
+  const selectedRecipeData = data.recipes[recipeIndex];
 
   if (!selectedRecipeData) {
     return res.status(404).send('Desculpe, mas a receita não foi encontrada.');
@@ -57,7 +54,7 @@ exports.postRecipe = (req, res) => {
   });
 
   const { ingredients, preparation } = req.body;
-  const newRecipeId = recipesData.length;
+  const newRecipeId = data.recipes.length;
   const newRecipeIngredients = ingredients.filter(ingredient => ingredient); // Removes '', null and undefined values from array
   const newRecipePreparation = preparation.filter(step => step);
   const newRecipeData = {
@@ -67,9 +64,9 @@ exports.postRecipe = (req, res) => {
     preparation: newRecipePreparation,
   };
 
-  recipesData.push(newRecipeData);
+  data.recipes.push(newRecipeData);
 
-  fs.writeFile('data.json', JSON.stringify(dataJSON, null, 2), error => {
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
     if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
 
     return res.status(200).redirect('/admin/recipes');
@@ -84,7 +81,7 @@ exports.putRecipe = (req, res) => {
   const currentPreparation = preparation.filter(step => step);
   let index = 0;
 
-  const matchingRecipeFound = recipesData.find((recipe, foundIndex) => {
+  const matchingRecipeFound = data.recipes.find((recipe, foundIndex) => {
     if (currentId === recipe.id) {
       index = foundIndex;
       return true;
@@ -103,11 +100,26 @@ exports.putRecipe = (req, res) => {
     preparation: currentPreparation,
   };
 
-  recipesData[index] = modifiedRecipeData;
+  data.recipes[index] = modifiedRecipeData;
 
-  fs.writeFile('data.json', JSON.stringify(dataJSON, null, 2), error => {
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
     if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
 
     return res.status(200).redirect(`/admin/recipes/${currentId}`);
+  });
+};
+
+exports.deleteRecipe = (req, res) => {
+  const { id } = req.body;
+  const currentId = Number(id);
+
+  const newRecipesList = data.recipes.filter(recipe => currentId !== recipe.id);
+
+  data.recipes = newRecipesList;
+
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
+    if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
+
+    return res.status(200).redirect(`/admin/recipes`);
   });
 };
