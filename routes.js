@@ -16,5 +16,6 @@ routes.get('/recipes/:index', recipeActions.getRecipeDetails);
 routes.get('/admin/recipes', adminActions.getRecipes);
 routes.get('/admin/recipes/create', adminActions.createRecipe);
 routes.get('/admin/recipes/:id', adminActions.getRecipeDetails);
+routes.get('/admin/recipes/:id/edit', adminActions.editRecipe);
 
 module.exports = routes;

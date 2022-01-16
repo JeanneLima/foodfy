@@ -13,6 +13,7 @@
   --color-white: #fff;
   --color-pink: #fbdfdb;
   --color-primary: #6558C3;
+  --color-danger: #DC4747;
 }
 
 /* Global styles */
@@ -80,15 +81,19 @@ textarea {
 }
 
 .button--filled {
-  padding: 9px 20px;
+  color: var(--color-white);
   border-radius: 4px;
   font-size: 16px;
   line-height: 19px;
+  padding: 9px 20px;
 }
 
 .button--primary {
-  color: var(--color-white);
   background-color: var(--color-primary);
+}
+
+.button--danger {
+  background-color: var(--color-danger);
 }
 
 .button--link {
@@ -110,6 +115,11 @@ textarea {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
+}
+
+.page__buttons-container {
+  display: flex;
+  gap: 10px;
 }
 
 .section__title {
