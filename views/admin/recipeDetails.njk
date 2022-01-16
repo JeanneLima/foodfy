@@ -7,7 +7,7 @@
 {% block sectionHeaderContent %}
   <h2 class="page__title">Receita: {{ recipe.title }}</h2>
   <div class="page__buttons-container">
-    <button class="button button--filled button--primary">Editar receita</button>
+    <button class="page__button--edit-recipe button button--filled button--primary">Editar receita</button>
   </div>
 {% endblock %}
 
@@ -17,4 +17,5 @@
 
 {% block scriptsImport %}
   <script type="module" src="../../scripts/recipeDetails.js"></script>
+  <script type="module" src="../../scripts/recipeManagement.js"></script>
 {% endblock %}
