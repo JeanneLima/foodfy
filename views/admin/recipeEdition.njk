@@ -1,14 +1,16 @@
 {% extends "admin/layout.njk" %}
 
 {% block mainContent %}
-  <form class="form__container" method="POST" action="/admin/recipes">
+  <form class="form__container" method="POST" action="/admin/recipes?_method=PUT">
     <div class="page__header">
       <h2 class="page__title">Criando receita</h2>
       <div class="page__buttons-container">
         <button class="page__button--delete-recipe button button--filled button--danger">Deletar</button>
-        <button class="page__button--update-recipe button button--filled button--primary">Salvar receita</button>
+        <button type="submit" class="page__button--update-recipe button button--filled button--primary">Salvar receita</button>
       </div>
     </div>
+
+    <input type="hidden" name="id" value="{{recipe.id}}" class="form__input">
 
     {% include '../templates/recipeManagementForm.njk' %}
   </form>
