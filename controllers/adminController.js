@@ -69,7 +69,7 @@ exports.postRecipe = (req, res) => {
   fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
     if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
 
-    return res.status(200).redirect('/admin/recipes');
+    return res.redirect('/admin/recipes');
   });
 };
 
@@ -105,7 +105,7 @@ exports.putRecipe = (req, res) => {
   fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
     if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
 
-    return res.status(200).redirect(`/admin/recipes/${currentId}`);
+    return res.redirect(`/admin/recipes/${currentId}`);
   });
 };
 
@@ -120,6 +120,6 @@ exports.deleteRecipe = (req, res) => {
   fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
     if (error) return res.status(500).send('Erro ao escrever dados em arquivo');
 
-    return res.status(200).redirect(`/admin/recipes`);
+    return res.redirect(`/admin/recipes`);
   });
 };
