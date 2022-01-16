@@ -196,18 +196,23 @@ textarea {
 
 .recipes__list-item {
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .recipes__list-item-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-height: 140px;
+  height: 140px;
   border-radius: 15px;
   overflow: hidden;
 }
 
 .recipes__list-item-image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  min-height: 140px;
 }
 
 .recipes__list-item-title {

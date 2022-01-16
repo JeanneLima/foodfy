@@ -1,6 +1,6 @@
 /* Most popular recipes section */
 #recipes__section--admin {
-  margin-top: 50px;
+  margin: 50px 0 40px;
 }
 
 /* Recipes */
@@ -13,11 +13,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
-
-.recipes__list-item-image-container {
-  height: fit-content;
-  max-height: 140px;
 }
 
 .recipes__list-item-infos {
